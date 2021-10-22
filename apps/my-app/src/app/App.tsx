@@ -18,6 +18,7 @@ import {
 // @ts-ignore
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 import Star from './star.svg';
+import { AppNavigation } from '@nx-react-native-example/mobile/app-navigation'
 
 const App = () => {
   return (
@@ -85,6 +86,7 @@ const App = () => {
               </View>
             </View>
           </View>
+          <AppNavigation/>
         </ScrollView>
       </SafeAreaView>
     </>

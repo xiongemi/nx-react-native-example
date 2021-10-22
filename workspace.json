@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "mobile-app-navigation": "libs/mobile/app-navigation",
     "my-app": "apps/my-app",
     "my-app-e2e": "apps/my-app-e2e"
   }
