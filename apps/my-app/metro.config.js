@@ -19,6 +19,7 @@ module.exports = (async () => {
       resolver: {
         assetExts: assetExts.filter((ext) => ext !== 'svg'),
         sourceExts: [...sourceExts, 'svg'],
+        blacklistRE: /libs\/my-lib\/package.json/
       },
     },
     {
