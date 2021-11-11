@@ -18,8 +18,10 @@ import {
 // @ts-ignore
 import openURLInBrowser from 'react-native/Libraries/Core/Devtools/openURLInBrowser';
 import Star from './star.svg';
+import { myLib } from '@poc/my-lib';
 
 const App = () => {
+  console.log(myLib);
   return (
     <>
       <StatusBar barStyle="dark-content" />

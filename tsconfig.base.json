@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@poc/my-lib": ["dist/libs/my-lib/my-lib.esm.js"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

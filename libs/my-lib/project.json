@@ -1,0 +1,42 @@
+{
+  "root": "libs/my-lib",
+  "sourceRoot": "libs/my-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/my-lib",
+        "tsConfig": "libs/my-lib/tsconfig.lib.json",
+        "project": "libs/my-lib/package.json",
+        "entryFile": "libs/my-lib/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/my-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/my-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/my-lib"],
+      "options": {
+        "jestConfig": "libs/my-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
