@@ -1,0 +1,23 @@
+{
+  "root": "libs/mobile/app-navigation",
+  "sourceRoot": "libs/mobile/app-navigation/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/mobile/app-navigation/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/mobile/app-navigation"],
+      "options": {
+        "jestConfig": "libs/mobile/app-navigation/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
